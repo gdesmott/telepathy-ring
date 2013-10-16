@@ -1,6 +1,7 @@
 TWISTED_TESTS = \
 		cm/protocol.py \
 		connect/connect-success.py \
+		text/send-message.py \
 		$(NULL)
 
 config.py: Makefile
