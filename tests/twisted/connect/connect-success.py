@@ -7,7 +7,7 @@ from ringtest import exec_test
 from servicetest import EventPattern, call_async
 import constants as cs
 
-def test(q, bus, conn):
+def test(q, bus, conn, phonesim):
     conn.Connect()
     q.expect('dbus-signal', signal='StatusChanged', args=[cs.CONN_STATUS_CONNECTING, cs.CSR_REQUESTED])
     q.expect('dbus-signal', signal='StatusChanged', args=[cs.CONN_STATUS_CONNECTED, cs.CSR_REQUESTED])

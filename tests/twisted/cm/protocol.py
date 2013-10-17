@@ -7,7 +7,7 @@ from servicetest import unwrap, tp_path_prefix, assertEquals, assertContains
 from ringtest import exec_test
 import constants as cs
 
-def test(q, bus, conn):
+def test(q, bus, conn, phonesim):
     cm = bus.get_object(cs.CM + '.ring',
         tp_path_prefix + '/ConnectionManager/ring')
     cm_iface = dbus.Interface(cm, cs.CM)
